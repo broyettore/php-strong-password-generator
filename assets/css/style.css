@@ -38,3 +38,28 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
+
+/************** MAIN *********/
+
+main {
+    height: calc(100vh - 88px);
+}
+
+main > .container {
+    height: 100%;
+}
+
+.ms-select,
+.ms-btn {
+    background-color: var(--bg-color);
+    border-color: var(--alt-bg-color);
+    color: var(--alt-bg-color);
+}
+
+.ms-select:focus {
+    box-shadow: none;
+}
+
+.ms-btn:hover {
+    background-color: var(--bg-color);
+}

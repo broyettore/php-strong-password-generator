@@ -21,7 +21,42 @@
     <title>PHP Password</title>
 </head>
 <body>
-
+    <!-- header  -->
+    <header>
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <h1 class="fs-3">Php Pass</h1>
+            <nav>
+                <ul class="d-flex">
+                    <li class="p-2 m-2">Services</li>
+                    <li class="p-2 m-2">FAQ</li>
+                    <li class="p-2 m-2 pe-0 me-0">Contact</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- /header  -->
     
+    <!-- main -->
+    <main>
+        <div class="container d-flex flex-column justify-content-center align-items-center p-4">
+            <h2 class="fs-4 mb-3">Password Generator</h2>
+            <fieldset class="mb-3">
+                <form method="GET">
+                    <select class="form-select ms-select mb-3" aria-label="Default select example" name="passWordType">
+                        <option selected>Choose Password Strenght</option>
+                        <option value="1">Weak</option>
+                        <option value="2">Medium</option>
+                        <option value="3">Strong</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary ms-btn">Submit</button>
+                </form>
+            </fieldset>
+            <div class="result">
+                <h3 class="fs-5 mb-3">Password Generated</h3>
+                <p></p>
+            </div>
+        </div>
+    </main>
+    <!-- /main -->
 </body>
 </html>
