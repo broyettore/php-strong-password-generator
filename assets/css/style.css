@@ -49,15 +49,11 @@ main > .container {
     height: 100%;
 }
 
-.ms-select,
+.ms-text-input,
 .ms-btn {
     background-color: var(--bg-color);
     border-color: var(--alt-bg-color);
     color: var(--alt-bg-color);
-}
-
-.ms-select:focus {
-    box-shadow: none;
 }
 
 .ms-btn:hover {

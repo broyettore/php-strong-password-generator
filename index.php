@@ -1,6 +1,22 @@
 <?php
 
+$passChars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+$genPass = $_GET["genPass"];
 
+function createPassword($passlen, $passCombo) {
+
+    $password = "";
+
+    if (!empty($passlen)) {
+        for ($i = 0; $i <= $passlen - 1; $i++) {
+            $randomNumber = random_int(0, strlen($passCombo) - 1);
+            $randomPass= $passCombo[$randomNumber];
+            $password .= $randomPass;
+           }
+    }
+
+    return $password;
+};
 
 ?>
 
@@ -41,19 +57,17 @@
         <div class="container d-flex flex-column justify-content-center align-items-center p-4">
             <h2 class="fs-4 mb-3">Password Generator</h2>
             <fieldset class="mb-3">
-                <form method="GET">
-                    <select class="form-select ms-select mb-3" aria-label="Default select example" name="passWordType">
-                        <option selected>Choose Password Strenght</option>
-                        <option value="1">Weak</option>
-                        <option value="2">Medium</option>
-                        <option value="3">Strong</option>
-                    </select>
+                <form action="index.php" method="GET">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Password Length</label>
+                        <input type="text" class="form-control ms-text-input" id="exampleInputEmail1" aria-describedby="emailHelp" name="genPass">
+                    </div>
                     <button type="submit" class="btn btn-primary ms-btn">Submit</button>
                 </form>
             </fieldset>
             <div class="result">
                 <h3 class="fs-5 mb-3">Password Generated</h3>
-                <p></p>
+                <p><?php echo createPassword($genPass, $passChars) ?></p>
             </div>
         </div>
     </main>
