@@ -47,14 +47,19 @@ include ("functions.php");
                         <input type="text" class="form-control ms-text-input" id="exampleInputEmail1" aria-describedby="emailHelp" name="genPass">
                     </div>
                     <button type="submit" class="btn btn-primary ms-btn">Submit</button>
+                    <button  class="btn btn-secondary ms-btn">Reset</button>
                 </form>
             </fieldset>
             <div class="result">
                 <h3 class="fs-5 mb-3">Password Generated</h3>
-                <p><?php echo createPassword($genPass, $passChars) ?></p>
+                <p class="result"><?php echo createPassword($genPass, $passChars) ?></p>
             </div>
         </div>
     </main>
     <!-- /main -->
+
+
+    <!-- js  -->
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
