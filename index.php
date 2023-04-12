@@ -2,6 +2,14 @@
 
 include ("functions.php");
 
+session_start();
+
+if (!empty($genPass)) {
+
+    $_SESSION["password"] = createPassword($genPass, $passChars);
+    header("location: result.php");
+}
+
 ?>
 
 <!DOCTYPE html>

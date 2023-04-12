@@ -2,10 +2,9 @@
 
 $passChars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 $genPass = $_GET["genPass"];
+$password = "";
 
 function createPassword($passlen, $passCombo) {
-
-    $password = "";
 
     if (!empty($passlen)) {
         for ($i = 0; $i <= $passlen - 1; $i++) {
@@ -17,3 +16,4 @@ function createPassword($passlen, $passCombo) {
 
     return $password;
 };
+
